@@ -1,0 +1,41 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "audioVoices": {
+        "ui sound": {}
+    },
+    "audioStreams": {
+        "crowd-claps": {
+            "filename": "../Assets/Audio/crowd-claps.wav"
+        }
+    },
+    "elements": [
+        {
+            "type": "window",
+            "title": "LGUI2 Trigger Example",
+            "name": "trigger-1.window",
+            "minSize": [200,60],
+            "content": {
+                "type": "imagebox",
+                "imageBrush":{
+                    "color":"#ffffffff",
+                    "imageFile": "../Assets/Images/banana.gif"
+                },
+                "triggers": {
+                    "simple-trigger":{
+                        "note":"This particular trigger could alternatively be done by gotMouseOver and lostMouseOver event handlers",
+                        "condition": "${LGUI2.TriggerContext.IsMouseOver}",
+                        "matched":{
+                            "type":"audio",
+                            "voiceName": "ui sound",
+                            "streamName": "crowd-claps"
+                        },
+                        "unmatched":{
+                            "type":"audio",
+                            "voiceName": "ui sound"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
