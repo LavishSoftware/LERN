@@ -1,0 +1,14 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "elements": [
+        {
+            "type": "window",
+            "title": "TextBlock Example",
+            "name": "textblock.window",
+            "content": {
+                "type": "textblock",
+                "text":"Hello World!"
+            }
+        }
+    ]
+}

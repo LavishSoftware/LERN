@@ -1,0 +1,108 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "audioVoices": {
+        "music": {
+            "volume": [1.0,0.5]
+        },
+        "ui sound": {
+            "volume": [0.5,1.0]
+        }
+    },
+    "audioStreams": {
+        "manic in repose": {
+            "filename": "Cagey_House_-_07_-_Manic_in_Repose.mp3"
+        },
+        "crowd-claps": {
+            "filename": "../Assets/Audio/crowd-claps.wav"
+        }
+    },
+    "elements": [
+        {
+            "type": "window",
+            "title": "LGUI2 Audio Example",
+            "name": "audio-3.window",
+            "minSize": [
+                200,
+                60
+            ],
+            "content": {
+                "type": "stackpanel",
+                "horizontalAlignment": "center",
+                "orientation": "horizontal",
+                "children": [
+                    {
+                        "type": "stackpanel",
+                        "horizontalAlignment": "center",
+                        "orientation": "horizontal",
+                        "borderBrush":{
+                            "color":"#ff0000"
+                        },
+                        "borderThickness":2,
+                        "padding":5,
+                        "children": [
+                            {
+                                "type": "button",
+                                "content": "Music",
+                                "margin": [0,0,10,0],
+                                "eventHandlers": {
+                                    "onPress": {
+                                        "type": "audio",
+                                        "streamName": "manic in repose",
+                                        "voiceName": "music",
+                                        "flush": true
+                                    }
+                                }
+                            },
+                            {
+                                "type": "button",
+                                "content": "Stop",
+                                "eventHandlers": {
+                                    "onPress": {
+                                        "type": "audio",
+                                        "voiceName": "music"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "stackpanel",
+                        "horizontalAlignment": "center",
+                        "orientation": "horizontal",
+                        "borderBrush":{
+                            "color":"#0000ff"
+                        },
+                        "borderThickness":2,
+                        "padding":5,
+                        "children": [
+                            {
+                                "type": "button",
+                                "margin": [0,0,10,0],
+                                "content": "More Claps",
+                                "eventHandlers": {
+                                    "onPress": {
+                                        "type": "audio",
+                                        "streamName": "crowd-claps",
+                                        "voiceName": "ui sound",
+                                        "flush": false
+                                    }
+                                }
+                            },
+                            {
+                                "type": "button",
+                                "content": "Stop",
+                                "eventHandlers": {
+                                    "onPress": {
+                                        "type": "audio",
+                                        "voiceName": "ui sound"
+                                    }
+                                }
+                            }
+                        ]
+                    }                
+                ]   
+            }
+        }
+    ]
+}
+    

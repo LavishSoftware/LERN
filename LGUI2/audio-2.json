@@ -1,0 +1,51 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "audioVoices": {
+        "ui sound": {
+        }
+    },
+    "audioStreams": {
+        "crowd-claps": {
+            "filename": "../Assets/Audio/crowd-claps.wav"
+        }
+    },
+    "elements": [
+        {
+            "type": "window",
+            "title": "LGUI2 Audio Example",
+            "name": "audio-2.window",
+            "minSize": [200,60],
+            "content": 
+            {
+                "type": "stackpanel",
+                "horizontalAlignment": "center",
+                "orientation": "horizontal",
+                "children": [
+                    {
+                        "type": "button",
+                        "content": "Enqueue",
+                        "margin": [0,0,10,0],
+                        "eventHandlers": {
+                            "onPress": {
+                                "type": "audio",
+                                "streamName": "crowd-claps",
+                                "voiceName": "ui sound",
+                                "flush":false
+                            }
+                        }
+                    },
+                    {
+                        "type": "button",
+                        "content": "Stop",
+                        "eventHandlers": {
+                            "onPress": {
+                                "type": "audio",
+                                "voiceName": "ui sound"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

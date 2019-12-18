@@ -1,0 +1,26 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "templates":{
+        "fancyText":{
+            "font":{
+                "bold":true
+            },
+            "color":"#ff0000"
+        }
+    },
+    "elements": [
+        {
+            "type": "window",
+            "title": "Template Example",
+            "name": "template.window",
+            "backgroundBrush":{
+                "color":"#ffffff"
+            },
+            "content": {
+                "jsonTemplate":"fancyText",
+                "type": "textblock",
+                "text":"Ho Ho Ho"
+            }
+        }
+    ]
+}

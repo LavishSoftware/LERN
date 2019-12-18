@@ -1,0 +1,13 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "elements": [
+        {
+            "type":"window",
+            "title":"LGUI2 Example 1",
+            "name": "example1.window",
+            "content":"Hello World!",
+            "width":200,
+            "height":60
+        }
+    ]
+}

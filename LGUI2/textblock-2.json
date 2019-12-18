@@ -1,0 +1,15 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "elements": [
+        {
+            "type": "window",
+            "title": "TextBlock Example",
+            "name": "textblock.window",
+            "width":200,
+            "content": {
+                "type": "textblock",
+                "text":"FPS: ${Display.FPS.Centi}"
+            }
+        }
+    ]
+}

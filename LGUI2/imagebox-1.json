@@ -1,0 +1,19 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "elements": [
+        {
+            "type": "window",
+            "title": "ImageBox Example",
+            "name": "imagebox.window",
+            "content": {
+                "type": "imagebox",
+                "margin": [ 1, 1, 1, 1 ],
+                "imageBrush": {
+                  "color": [ 1.0, 1.0, 1.0 ],
+                  "imageFile": "../Assets/Images/banana.gif",
+                  "imageOrientation":"mirrorVertical"
+                }
+            }
+        }
+    ]
+}

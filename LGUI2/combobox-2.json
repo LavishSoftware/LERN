@@ -1,0 +1,33 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "elements": [
+        {
+            "type": "window",
+            "title": "LGUI2 Editor Example",
+            "name": "editor.window",
+            "width": 500,
+            "content": {
+                "type": "stackpanel",
+                "horizontalContentAlignment": "left",
+                "children": [
+                    "People",
+                    {
+                        "type": "combobox",
+                        "name": "editor.combobox",
+                        "horizontalAlignment": "stretch",
+                        "itemsBinding":{
+                            "pullFormat":"${LGUI2Controller.PeopleItems}"
+                        }, 
+                        "eventHandlers": {
+                            "onSelectionChanged": {
+                                "type": "method",
+                                "object": "LGUI2Controller",
+                                "method": "OnSelectionChanged"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

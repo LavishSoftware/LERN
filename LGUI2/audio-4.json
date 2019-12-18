@@ -1,0 +1,133 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "audioVoices": {
+        "music": {
+            "volume": [1.0,0.5]
+        },
+        "ui sound": {
+            "volume": [0.5,1.0]
+        }
+    },
+    "audioStreams": {
+        "manic in repose": {
+            "filename": "Cagey_House_-_07_-_Manic_in_Repose.mp3"
+        },
+        "crowd-claps": {
+            "filename": "../Assets/Audio/crowd-claps.wav"
+        }
+    },
+    "elements": [
+        {
+            "type": "window",
+            "title": "LGUI2 Audio Example",
+            "name": "audio-4.window",
+            "minSize": [
+                200,
+                60
+            ],
+            "content": {
+                "type": "stackpanel",
+                "horizontalAlignment": "center",
+                "orientation": "horizontal",
+                "children": [
+                    {
+                        "type": "stackpanel",
+                        "horizontalAlignment": "center",
+                        "orientation": "vertical",
+                        "borderBrush":{
+                            "color":"#ff0000"
+                        },
+                        "margin":[0,0,5,0],
+                        "width":150,
+                        "borderThickness":2,
+                        "padding":5,
+                        "children": [
+                            "Voice 1",
+                            {
+                                "type": "button",
+                                "content": "Music",
+                                "margin": [0,5,0,5],
+                                "eventHandlers": {
+                                    "onPress": {
+                                        "type": "audio",
+                                        "streamName": "manic in repose",
+                                        "voiceName": "music",
+                                        "flush": true
+                                    }
+                                }
+                            },
+                            {
+                                "type": "button",
+                                "content": "Stop",
+                                "eventHandlers": {
+                                    "onPress": {
+                                        "type": "audio",
+                                        "voiceName": "music"
+                                    }
+                                }
+                            },
+                            {
+                                "type": "button",
+                                "content": "Pause",
+                                "eventHandlers": {
+                                    "onPress": {
+                                        "type": "code",
+                                        "code":"Audio.Voice[music]:Pause"
+                                    }
+                                }
+                            },
+                            {
+                                "type": "button",
+                                "content": "Start",
+                                "eventHandlers": {
+                                    "onPress": {
+                                        "type": "code",
+                                        "code":"Audio.Voice[music]:Start"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "stackpanel",
+                        "horizontalAlignment": "center",
+                        "orientation": "vertical",
+                        "borderBrush":{
+                            "color":"#0000ff"
+                        },
+                        "width":150,
+                        "borderThickness":2,
+                        "padding":5,
+                        "children": [
+                            "Voice 2",
+                            {
+                                "type": "button",
+                                "margin": [0,5,0,5],
+                                "content": "More Claps",
+                                "eventHandlers": {
+                                    "onPress": {
+                                        "type": "audio",
+                                        "streamName": "crowd-claps",
+                                        "voiceName": "ui sound",
+                                        "flush": false
+                                    }
+                                }
+                            },
+                            {
+                                "type": "button",
+                                "content": "Stop",
+                                "eventHandlers": {
+                                    "onPress": {
+                                        "type": "audio",
+                                        "voiceName": "ui sound"
+                                    }
+                                }
+                            }
+                        ]
+                    }                
+                ]   
+            }
+        }
+    ]
+}
+    

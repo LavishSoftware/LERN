@@ -1,0 +1,88 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "elements": [
+        {
+            "type": "window",
+            "name": "game.window",
+            "title": "Game",
+            "content": {
+                "type": "panel",
+                "name":"game.board",
+                "acceptsKeyboardFocus": true,
+                "acceptsMouseFocus": true,
+                "width": 640,
+                "height": 480,
+                "children": [
+                    {
+                        "type":"canvas",
+                        "name":"game.background",
+                        "width": 640,
+                        "height": 480,
+                            "initialize": [
+                            {
+                                "op": "clear",
+                                "color": "#ff000000"
+                            }
+                        ],
+                        "strata":0.1
+                    },
+                    {
+                        "type":"canvas",
+                        "name":"game.player",
+                        "width":48,
+                        "height":48,
+                        "brushes":{
+                            "test1":{"color":"#ffcccc66"}
+                        },
+                        "initialize":[
+                            {
+                                "op":"pushBrush",
+                                "brush":"test1"
+                            },
+                            {
+                                "op":"drawCircle",
+                                "x":0.5,
+                                "y":0.2,
+                                "radius":0.1          
+                            },
+                            {
+                                "op":"drawPrimitives",
+                                "type":"lineList",
+                                "vertices":[
+                                    [0.5,0.3,0,0,"#ffff0000"],
+                                    [0.5,0.6,0,0,"#ffff0000"],
+                    
+                                    [0.5,0.35,0,0,"#ffff0000"],
+                                    [0.35,0.55,0,0,"#ff00ff00"],
+                    
+                                    [0.5,0.35,0,0,"#ffff0000"],
+                                    [0.65,0.55,0,0,"#ff00ff00"], 
+                    
+                                    [0.5,0.6,0,0,"#ffff0000"],
+                                    [0.35,0.8,0,0,"#ff00ff00"],
+                    
+                                    [0.5,0.6,0,0,"#ffff0000"],
+                                    [0.65,0.8,0,0,"#ff00ff00"]
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "eventHandlers": {
+                    "onButtonMove":{
+                        "type":"method",
+                        "object":"GameController",
+                        "method":"OnButtonMove"
+                    }
+                }
+            },
+            "eventHandlers": {
+                "onRefresh": {
+                    "type": "method",
+                    "object": "GameController",
+                    "method": "OnRefresh"
+                }
+            }
+        }
+    ]
+}
