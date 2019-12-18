@@ -7,7 +7,7 @@ LERN covers a range of topics, from beginner level to advanced.
 
 # Requirements
 * Using LERN will require you to have Inner Space (not free) or dxLavish (basically a free, lightweight/stripped-down Inner Space instance). LERN is designed with dxLavish in mind.
-* Some examples are affected by known bugs that are fixed 
+* Some examples are affected by known bugs that are fixed in updated builds of Inner Space or dxLavish
 * Visual Studio Code is our recommended editor, for LavishScript highlighting in particular. A LavishScript add-on for VS Code is available from the Marketplace, and should automatically provide a notification to download it the first time you open a LavishScript .iss file with Visual Studio Code.
 
 # Getting Started
