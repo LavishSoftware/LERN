@@ -49,7 +49,7 @@
                 "height":200,
                 "horizontalAlignment": "stretch",
                 "itemsBinding":{
-                    "pullFormat": "${Audio.Streams.AsJSON}"
+                    "pullFormat": "${Audio.Streams}"
                 },
                 "itemViewGenerators": {
                     "default":{
