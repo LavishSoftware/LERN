@@ -18,7 +18,7 @@ LERN covers a range of topics, from beginner level to advanced.
 
 After completing the Intro folder it is recommended to move on specifically to LGUI2/1.iss:
 * Open LGUI2/1.iss in Visual Studio Code
-* Run LERM/LGUI2/1.iss in dxLavish or Inner Space via the Console with the command "run lern/lgui2/1"
+* Run LERN/LGUI2/1.iss in dxLavish or Inner Space via the Console with the command "run lern/lgui2/1"
 * For scripts that do not end on their own, the EndScript command can be used to end the script, e.g. "end 1" to end LERN/lgui2/1 (full path not required)
 
 The LavishGUI 2 examples are broken into many separate series, covering different types of UI controls and concepts.
