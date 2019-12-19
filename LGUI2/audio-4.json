@@ -10,10 +10,16 @@
     },
     "audioStreams": {
         "manic in repose": {
-            "filename": "Cagey_House_-_07_-_Manic_in_Repose.mp3"
+            "filename": "../Assets/Audio/Cagey_House_-_07_-_Manic_in_Repose.mp3"
         },
         "crowd-claps": {
             "filename": "../Assets/Audio/crowd-claps.wav"
+        },
+        "squeak-in": {
+            "filename": "../Assets/Audio/squeaky-toy-in.mp3"
+        },
+        "squeak-out": {
+            "filename": "../Assets/Audio/squeaky-toy-out.mp3"
         }
     },
     "elements": [
@@ -120,6 +126,25 @@
                                     "onPress": {
                                         "type": "audio",
                                         "voiceName": "ui sound"
+                                    }
+                                }
+                            },
+                            {
+                                "type":"button",
+                                "margin": [0,5,0,5],
+                                "content": "Squeak",
+                                "eventHandlers": {
+                                    "onPress": {
+                                        "type": "audio",
+                                        "streamName": "squeak-in",
+                                        "voiceName": "ui sound",
+                                        "flush": true
+                                    },
+                                    "onRelease": {
+                                        "type": "audio",
+                                        "streamName": "squeak-out",
+                                        "voiceName": "ui sound",
+                                        "flush": true
                                     }
                                 }
                             }
