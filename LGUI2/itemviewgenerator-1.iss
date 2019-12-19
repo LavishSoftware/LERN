@@ -24,7 +24,6 @@ objectdef lgui2_controller
             "type":"itemview",
             "content":{
                 "type":"dockpanel",
-                "margin":[0,0,20,0]
                 "children":[
                     {
                         "_dock":"left",
