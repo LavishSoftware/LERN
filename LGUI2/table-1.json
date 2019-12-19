@@ -1,0 +1,208 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "audioVoices": {
+        "ui sound": {
+            "volume": [1.0,1.0]
+        }
+    },
+    "audioStreams": {
+        "chimes": {
+            "filename": "C:\\Windows\\Media\\chimes.wav"
+        },
+        "chord": {
+            "filename": "C:\\Windows\\Media\\chord.wav"
+        },
+        "ding": {
+            "filename": "C:\\Windows\\Media\\ding.wav"
+        },
+        "notify": {
+            "filename": "C:\\Windows\\Media\\notify.wav"
+        },
+        "recycle": {
+            "filename": "C:\\Windows\\Media\\recycle.wav"
+        },
+        "ringout": {
+            "filename": "C:\\Windows\\Media\\ringout.wav"
+        },
+        "tada": {
+            "filename": "C:\\Windows\\Media\\tada.wav"
+        },
+        "critical stop": {
+            "filename": "C:\\Windows\\Media\\Windows Critical Stop.wav"
+        },
+        "hardware fail": {
+            "filename": "C:\\Windows\\Media\\Windows Hardware Fail.wav"
+        }
+    },
+    "elements": [
+        {
+            "type": "window",
+            "name": "soundboard-1.window",
+            "title": "Super Amazing Windows Soundboard",
+            "width":400,
+            "height":400,
+            "content": {
+                "type": "table",
+                "rows": [
+                    {
+                        "heightFactor": 0.333333
+                    },
+                    {
+                        "heightFactor": 0.333333
+                    },
+                    {
+                        "heightFactor": 0.333333
+                    }
+                ],
+                "columns": [
+                    {
+                        "widthFactor": 0.3333333
+                    },
+                    {
+                        "widthFactor": 0.3333333
+                    },
+                    {
+                        "widthFactor": 0.3333333
+                    }
+                ],
+                "children": [
+                    {
+                        "type": "button",
+                        "_row": 1,
+                        "_column": 1,
+                        "content": "Chime",
+                        "verticalAlignment": "stretch",
+                        "horizontalAlignment": "stretch",
+                        "eventHandlers": {
+                            "onPress": {
+                                "type": "audio",
+                                "streamName": "chimes",
+                                "voiceName": "ui sound"
+                            }
+                        }
+                    },
+                    {
+                        "type": "button",
+                        "_row": 1,
+                        "_column": 2,
+                        "content": "Chord",
+                        "verticalAlignment": "stretch",
+                        "horizontalAlignment": "stretch",
+                        "eventHandlers": {
+                            "onPress": {
+                                "type": "audio",
+                                "streamName": "chord",
+                                "voiceName": "ui sound"
+                            }
+                        }
+                    },
+                    {
+                        "type": "button",
+                        "_row": 1,
+                        "_column": 3,
+                        "content": "Ding",
+                        "verticalAlignment": "stretch",
+                        "horizontalAlignment": "stretch",
+                        "eventHandlers": {
+                            "onPress": {
+                                "type": "audio",
+                                "streamName": "ding",
+                                "voiceName": "ui sound"
+                            }
+                        }
+                    },
+                    {
+                        "type": "button",
+                        "_row": 2,
+                        "_column": 1,
+                        "content": "Notify",
+                        "verticalAlignment": "stretch",
+                        "horizontalAlignment": "stretch",
+                        "eventHandlers": {
+                            "onPress": {
+                                "type": "audio",
+                                "streamName": "notify",
+                                "voiceName": "ui sound"
+                            }
+                        }
+                    },
+                    {
+                        "type": "button",
+                        "_row": 2,
+                        "_column": 2,
+                        "content": "Recycle",
+                        "verticalAlignment": "stretch",
+                        "horizontalAlignment": "stretch",
+                        "eventHandlers": {
+                            "onPress": {
+                                "type": "audio",
+                                "streamName": "recycle",
+                                "voiceName": "ui sound"
+                            }
+                        }
+                    },
+                    {
+                        "type": "button",
+                        "_row": 2,
+                        "_column": 3,
+                        "content": "Ringout",
+                        "verticalAlignment": "stretch",
+                        "horizontalAlignment": "stretch",
+                        "eventHandlers": {
+                            "onPress": {
+                                "type": "audio",
+                                "streamName": "ringout",
+                                "voiceName": "ui sound"
+                            }
+                        }
+                    },
+                    {
+                        "type": "button",
+                        "_row": 3,
+                        "_column": 1,
+                        "content": "Tada",
+                        "verticalAlignment": "stretch",
+                        "horizontalAlignment": "stretch",
+                        "eventHandlers": {
+                            "onPress": {
+                                "type": "audio",
+                                "streamName": "tada",
+                                "voiceName": "ui sound"
+                            }
+                        }
+                    },
+                    {
+                        "type": "button",
+                        "_row": 3,
+                        "_column": 2,
+                        "content": "Critical Stop",
+                        "verticalAlignment": "stretch",
+                        "horizontalAlignment": "stretch",
+                        "eventHandlers": {
+                            "onPress": {
+                                "type": "audio",
+                                "streamName": "critical stop",
+                                "voiceName": "ui sound"
+                            }
+                        }
+                    },
+                    {
+                        "type": "button",
+                        "_row": 3,
+                        "_column": 3,
+                        "content": "Hardware Fail",
+                        "verticalAlignment": "stretch",
+                        "horizontalAlignment": "stretch",
+                        "eventHandlers": {
+                            "onPress": {
+                                "type": "audio",
+                                "streamName": "hardware fail",
+                                "voiceName": "ui sound"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

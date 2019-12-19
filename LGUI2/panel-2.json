@@ -1,0 +1,28 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "elements": [
+        {
+            "type": "window",
+            "title": "Panel Example",
+            "name": "panel.window",
+            "content": {
+                "type": "panel",
+                "width":100,
+                "height":100,
+                "margin":5,
+                "borderThickness":2,
+                "borderBrush":{
+                    "color":"#ffff00"
+                },
+                "children":[
+                    {
+                        "type":"textblock",
+                        "text":"Hello World!",
+                        "verticalAlignment": "center",
+                        "horizontalAlignment": "center"
+                    }
+                ]
+            }
+        }
+    ]
+}
