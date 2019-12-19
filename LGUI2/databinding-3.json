@@ -1,0 +1,19 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "elements": [
+        {
+            "type": "window",
+            "title": "Data Binding Example",
+            "name": "databinding.window",
+            "width":300,
+            "content": {
+                "type": "listbox",
+                "height":200,
+                "horizontalAlignment": "stretch",
+                "itemsBinding":{
+                    "pullFormat": "${LGUI2Controller.GetElementList}"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "audioVoices": {
+        "ui sound":{}
+    },
+    "audioStreams": {
+        "manic in repose": {
+            "filename": "../Assets/Audio/Cagey_House_-_07_-_Manic_in_Repose.mp3"
+        },
+        "crowd-claps": {
+            "filename": "../Assets/Audio/crowd-claps.wav"
+        },        
+        "chimes": {
+            "filename": "C:\\Windows\\Media\\chimes.wav"
+        },
+        "chord": {
+            "filename": "C:\\Windows\\Media\\chord.wav"
+        },
+        "ding": {
+            "filename": "C:\\Windows\\Media\\ding.wav"
+        },
+        "notify": {
+            "filename": "C:\\Windows\\Media\\notify.wav"
+        },
+        "recycle": {
+            "filename": "C:\\Windows\\Media\\recycle.wav"
+        },
+        "ringout": {
+            "filename": "C:\\Windows\\Media\\ringout.wav"
+        },
+        "tada": {
+            "filename": "C:\\Windows\\Media\\tada.wav"
+        },
+        "critical stop": {
+            "filename": "C:\\Windows\\Media\\Windows Critical Stop.wav"
+        },
+        "hardware fail": {
+            "filename": "C:\\Windows\\Media\\Windows Hardware Fail.wav"
+        }
+    },
+    "elements": [
+        {
+            "type": "window",
+            "title": "Item View Generator Example",
+            "name": "itemviewgenerator.window",
+            "width":300,
+            "content": {
+                "type": "listbox",
+                "height":200,
+                "horizontalAlignment": "stretch",
+                "itemsBinding":{
+                    "pullFormat": "${Audio.Streams.AsJSON}"
+                },
+                "itemViewGenerators": {
+                    "default":{
+                        "type":"method",
+                        "object": "LGUI2Controller",
+                        "method": "GetAudioStreamView"
+                    }
+                }
+            }
+        }
+    ]
+}
