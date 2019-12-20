@@ -1,0 +1,23 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "elements": [
+        {
+            "type": "window",
+            "title": "Button Example",
+            "name": "button.window",
+            "content": {
+                "type": "button",
+                "content":{
+                    "type":"textblock",
+                    "text":"Click me!"
+                },
+                "eventHandlers": {
+                    "onPress":{
+                        "type":"code",
+                        "code":"echo Clicked!"
+                    }
+                }
+            }
+        }
+    ]
+}
