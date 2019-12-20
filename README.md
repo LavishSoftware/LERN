@@ -35,3 +35,6 @@ Different subject are generally divided into main folders
 
 # Tinker!
 The examples are meant for you to learn from, and even try out your own changes. Just edit, save, and run!
+
+# Discussion
+* Lavish Software Discord (https://discord.gg/qmtPT4j) has a #LERN channel for LERN discussion and updates.
