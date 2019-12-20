@@ -1,0 +1,27 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "elements": [
+        {
+            "type": "window",
+            "title": "Input Hook Example",
+            "name": "inputhook.window",
+            "content": {
+                "type": "textblock",
+                "text":"Press any key!",
+                "inputHooks": {
+                    "my hook for keyboard buttons":{
+                        "control":{
+                            "deviceType": "keyboard",
+                            "controlType": "button",
+                            "value": 1                            
+                        },
+                        "eventHandler":{
+                            "type":"code",
+                            "code":"echo Keyboard button pressed: ${Context.Args[controlName]}"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

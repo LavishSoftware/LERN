@@ -1,0 +1,42 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "elements": [
+        {
+            "type": "window",
+            "title": "LGUI2 Trigger Example",
+            "name": "trigger-1.window",
+            "minSize": [200,60],
+            "content": {
+                "type": "imagebox",
+                "imageBrush":{
+                    "color":"#ffffffff",
+                    "imageFile": "../Assets/Images/banana.gif"
+                },
+                "styles":{
+                    "mouseover gained":{
+                        "imageBrush":{
+                            "color":"#ffff0000",
+                            "imageFile": "../Assets/Images/banana.gif"
+                        }        
+                    },
+                    "mouseover lost":{
+                        "imageBrush":{
+                            "color":"#ffffffff",
+                            "imageFile": "../Assets/Images/banana.gif"
+                        }        
+                    }
+                },
+                "eventHandlers": {
+                    "gotMouseOver":{
+                        "type":"style",
+                        "styleName": "mouseover gained"
+                    },
+                    "lostMouseOver":{
+                        "type":"style",
+                        "styleName": "mouseover lost"
+                    }
+                }
+            }
+        }
+    ]
+}
