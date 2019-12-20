@@ -27,8 +27,9 @@ The LavishGUI 2 examples are broken into many separate series, covering differen
 Different subject are generally divided into main folders
 * Intro: Introduction to LavishScript
 * LGUI2: Covers many aspects of LavishGUI 2
-* LMAC: LavishMachine, a Virtual Machine system that currently manages "Tasks" for LavishScript
 * JSON: Read and Write JSON in LavishScript
+* Lists: Manage lists of things in LavishScript, including conversion to and from JSON
+* LMAC: LavishMachine, a Virtual Machine system that currently manages "Tasks" for LavishScript
 * Game: Introduction to game development with LavishGUI 2!
 * Audio: Use the Audio engine to play sounds
 
