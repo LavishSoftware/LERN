@@ -1,0 +1,16 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "elements": [
+        {
+            "type": "window",
+            "title": "Checkbox Example",
+            "name": "checkbox.window",
+            "width":300,
+            "content": {
+                "type": "checkbox",
+                "checkedBinding":"LGUI2Controller.CheckedState",
+                "content":"Data Bound to LGUI2Controller.CheckedState=${LGUI2Controller.CheckedState}"
+            }
+        }
+    ]
+}

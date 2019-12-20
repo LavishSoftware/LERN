@@ -1,0 +1,27 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "elements": [
+        {
+            "type": "window",
+            "title": "Checkbox Example",
+            "name": "checkbox.window",
+            "content": {
+                "type": "checkbox",
+                "content":{
+                    "type":"textblock",
+                    "text":"Toggle me!"
+                },
+                "eventHandlers": {
+                    "onChecked":{
+                        "type":"code",
+                        "code":"echo Checked!"
+                    },
+                    "onUnchecked":{
+                        "type":"code",
+                        "code":"echo Unchecked!"
+                    }
+                }
+            }
+        }
+    ]
+}
