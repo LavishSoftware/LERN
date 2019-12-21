@@ -120,11 +120,14 @@ objectdef gameController
         ; ... and add Speed * Time. Remember, SpeedX and SpeedY may be negative.
         newX:Inc[ ${SpeedX} * ${This.FrameTime} ]
         newY:Inc[ ${SpeedY} * ${This.FrameTime} ]
-        
+
+        ; update the element with the new calculations
+        LGUI2.Element[game.player]:SetLocation[${newX},${newY}]
+
         ; Note: In this simple example, no X-axis bounds/collision detection or handling is implemented. the player can move out of the game area!
 
-        ; let's implement bounds checking on Y
-        if ${This.OnGround}
+        ; now let's implement bounds checking on Y, and acceleration downward (gravity)
+        if ${This.IsOnGround}
         {
             ; we're on the ground, so make sure we have no positive Y axis movement.
             if ${SpeedY}>0
@@ -133,20 +136,16 @@ objectdef gameController
 
                 ; we just landed, don't land underground...
                 newY:Set[${LGUI2.Element[game.board].ActualHeight}-${LGUI2.Element[game.player].ActualHeight}]
+                LGUI2.Element[game.player]:SetLocation[${newX},${newY}]
             }
             ; negative Y axis movement is okay, it means we're jumping.
         }
         else
-        {
+        {            
             ; we're not on the ground, so apply gravity.
             SpeedY:Inc[${BaseSpeed}*5*${This.FrameTime}]
         }
 
-
-
-
-        ; now update the element with the new calculations
-        LGUI2.Element[game.player]:SetLocation[${newX},${newY}]
     }
 }
 
