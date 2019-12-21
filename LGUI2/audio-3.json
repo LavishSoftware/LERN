@@ -10,7 +10,7 @@
     },
     "audioStreams": {
         "manic in repose": {
-            "filename": "Cagey_House_-_07_-_Manic_in_Repose.mp3"
+            "filename": "../Assets/Audio/Cagey_House_-_07_-_Manic_in_Repose.mp3"
         },
         "crowd-claps": {
             "filename": "../Assets/Audio/crowd-claps.wav"
