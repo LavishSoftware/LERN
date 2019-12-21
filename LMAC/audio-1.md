@@ -18,6 +18,8 @@ An audio stream can be played on an existing audio voice with a ```audio.playstr
 }
 ```
 
+The definition and behavior of an ```audio.playstream``` task is identical to an LavishGUI 2 ```audio``` event handler (see [LGUI2/audio-1.md](../LGUI2/audio-1.md)).
+
 The ```voiceName``` specifies which voice to use, and the ```streamName``` specifies which stream to play.
 
 If provided, a ```flush``` property specifies whether to stop the voice and clear its queue before playing the specified stream. **By default if not specified, ```flush``` is ```true```**.
