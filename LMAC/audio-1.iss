@@ -86,6 +86,7 @@ objectdef audio_example
     method Shutdown()
     {
         TaskManager:Destroy
+        Audio.Voice[music]:Stop:ClearQueue
     }
 }
 
