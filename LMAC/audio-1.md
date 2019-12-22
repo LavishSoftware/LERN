@@ -3,7 +3,10 @@ This example introduces audio tasks. For an introduction to Audio, see **LERN/Au
 
 Open the file [audio-1.iss](audio-1.iss), and run the script with ```run lern/lmac/audio-1```.
 
-Over a period of 45 seconds, "music" will be played at varying volume levels, first dropping to 10% volume on both channels and then panning left and right several times.
+Over a period of 50 seconds, music will be played at varying volume levels:
+1. first dropping to 10% volume on left/right channels
+2. then panning left and right several times
+3. and then back down to 10%.
 
 End the script with ```end audio-1``` when finished. Ending the script will stop the sound.
 
@@ -14,7 +17,8 @@ An audio stream can be played on an existing audio voice with a ```audio.playstr
 {
     "type":"audio.playstream",
     "voiceName":"music",
-    "streamName":"manic in repose"
+    "streamName":"tune",
+    "playCount":6
 }
 ```
 
@@ -23,6 +27,8 @@ The definition and behavior of an ```audio.playstream``` task is identical to an
 The ```voiceName``` specifies which voice to use, and the ```streamName``` specifies which stream to play.
 
 If provided, a ```flush``` property specifies whether to stop the voice and clear its queue before playing the specified stream. **By default if not specified, ```flush``` is ```true```**.
+
+The ```playCount``` can be provided to play the sound a given number of times, or set to ```-1``` to loop the sound forever. **If not provided, ```playCount``` is ```1```**.
 
 If no ```streamName``` is provided, the behavior is to stop the voice. As noted above, if ```flush``` is not provided, the queue is also cleared.
 

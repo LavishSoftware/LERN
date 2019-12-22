@@ -9,8 +9,8 @@
         }
     },
     "audioStreams": {
-        "manic in repose": {
-            "filename": "../Assets/Audio/Cagey_House_-_07_-_Manic_in_Repose.mp3"
+        "tune": {
+            "filename": "../Assets/Audio/Caileth Thaler - Original tune.mp3"
         },
         "crowd-claps": {
             "filename": "../Assets/Audio/crowd-claps.wav"
@@ -56,7 +56,7 @@
                                 "eventHandlers": {
                                     "onPress": {
                                         "type": "audio",
-                                        "streamName": "manic in repose",
+                                        "streamName": "tune",
                                         "voiceName": "music",
                                         "flush": true
                                     }

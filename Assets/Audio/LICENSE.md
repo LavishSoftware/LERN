@@ -10,3 +10,6 @@ Here's the original links.
 * Squeaky-toy-sound-effect.mp3: http://www.orangefreesounds.com/squeaky-toy-sound-effect/
     * squeaky-toy-in.mp3: Adapted from Squeaky-toy-sound-effect.mp3
     * squeaky-toy-out.mp3: Adapted from Squeaky-toy-sound-effect.mp3
+
+
+* Caileth Thaler - Original tune: This is an untitled original tune, used with permission.

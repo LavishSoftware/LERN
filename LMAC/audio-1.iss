@@ -7,14 +7,15 @@ objectdef audio_example
         Audio:AddVoice[music]
 
         ; add an audio stream. This is a sound that a voice can make.
-        Audio:AddStream[manic in repose,"..\\Assets\\Audio\\Cagey_House_-_07_-_Manic_in_Repose.mp3"]
+        Audio:AddStream[tune,"../Assets/Audio/Caileth Thaler - Original tune.mp3"]
 
         ; play some music
         TaskManager:BeginTask["$$>
         {
             "type":"audio.playstream",
             "voiceName":"music",
-            "streamName":"manic in repose"
+            "streamName":"tune",
+            "playCount":6
         }
         <$$"]
 
@@ -76,6 +77,12 @@ objectdef audio_example
                     "duration":5.0,
                     "voiceName":"music",
                     "volume":[0.1,1.0]
+                },
+                {
+                    "type":"audio.setvolume",
+                    "duration":5.0,
+                    "voiceName":"music",
+                    "volume":[0.1,0.1]
                 }
             ]
         }
