@@ -1,0 +1,184 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "audioVoices":{
+        "game.player":{},
+        "game.music":{"volume":[0.4,0.4]}
+    },
+    "audioStreams":{
+        "exploration": {
+            "filename": "../Assets/Audio/Caileth Thaler - Original tune.mp3"
+        },
+        "squeak-in": {
+            "filename": "../Assets/Audio/squeaky-toy-in.mp3"
+        },
+        "squeak-out": {
+            "filename": "../Assets/Audio/squeaky-toy-out.mp3"
+        }
+    },
+    "elements": [
+        {
+            "type": "window",
+            "name": "game.window",
+            "title": "Bouncing on a Squeaky Toy",
+            "content": {
+                "type": "panel",
+                "name":"game.board",
+                "acceptsKeyboardFocus": true,
+                "acceptsMouseFocus": true,
+                "width": 640,
+                "height": 480,
+                "children": [
+                    {
+                        "type":"canvas",
+                        "name":"game.background",
+                        "width": 640,
+                        "height": 480,
+                        "brushes": {
+                            "white":{
+                                "color":"#ffffffff"
+                            }
+                        },
+                            "initialize": [
+                            {
+                                "op": "clear",
+                                "color": "#ff112222"
+                            },
+                            {
+                                "op":"pushBrush",
+                                "brush":"white"
+                            },
+                            {
+                                "op":"drawCircle",
+                                "x":32,
+                                "y":64,
+                                "radius": 32,
+                                "resolution": 32,
+                                "transform":false,
+                                "opacity": 0.9
+                            },
+                            {
+                                "op":"drawCircle",
+                                "x":64,
+                                "y":80,
+                                "radius": 32,
+                                "resolution": 32,
+                                "transform":false,
+                                "opacity": 0.8
+                            },
+                            {
+                                "op":"drawCircle",
+                                "x":96,
+                                "y":112,
+                                "radius": 24,
+                                "resolution": 32,
+                                "transform":false,
+                                "opacity": 0.9
+                            },
+                            {
+                                "op":"drawCircle",
+                                "x":256,
+                                "y":386,
+                                "radius": 16,
+                                "resolution": 32,
+                                "transform":false,
+                                "opacity": 0.9
+                            },
+                            {
+                                "op":"drawCircle",
+                                "x":316,
+                                "y":225,
+                                "radius": 48,
+                                "resolution": 32,
+                                "transform":false,
+                                "opacity": 0.9
+                            },
+                            {
+                                "op":"drawCircle",
+                                "x":195,
+                                "y":312,
+                                "radius": 40,
+                                "resolution": 32,
+                                "transform":false,
+                                "opacity": 0.9
+                            },
+                            {
+                                "op":"drawCircle",
+                                "x":486,
+                                "y":96,
+                                "radius": 12,
+                                "resolution": 32,
+                                "transform":false,
+                                "opacity": 0.9
+                            },
+                            {
+                                "op":"drawCircle",
+                                "x":128,
+                                "y":128,
+                                "radius": 42,
+                                "resolution": 32,
+                                "transform":false,
+                                "opacity": 0.9
+                            }
+                        ],
+                        "strata":0.1
+                    },
+                    {
+                        "type":"canvas",
+                        "name":"game.player",
+                        "width":48,
+                        "height":48,
+                        "brushes":{
+                            "player.baseColor":{"color":"#ffcccc66"}
+                        },
+                        "initialize":[
+                            {
+                                "op":"pushBrush",
+                                "brush":"player.baseColor"
+                            },
+                            {
+                                "op":"drawCircle",
+                                "x":0.5,
+                                "y":0.2,
+                                "radius":0.1          
+                            },
+                            {
+                                "op":"drawPrimitives",
+                                "type":"lineList",
+                                "vertices":[
+                                    [0.5,0.3,0,0,"#ffff0000"],
+                                    [0.5,0.6,0,0,"#ffff0000"],
+                    
+                                    [0.49,0.35,0,0,"#ffff0000"],
+                                    [0.35,0.65,0,0,"#ff00ff00"],
+                    
+                                    [0.51,0.35,0,0,"#ffff0000"],
+                                    [0.65,0.65,0,0,"#ff00ff00"], 
+                    
+                                    [0.49,0.6,0,0,"#ffff0000"],
+                                    [0.35,1.0,0,0,"#ff00ff00"],
+                    
+                                    [0.51,0.6,0,0,"#ffff0000"],
+                                    [0.65,1.0,0,0,"#ff00ff00"]
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "eventHandlers": {
+                    "onButtonMove":{
+                        "type":"method",
+                        "object":"GameController",
+                        "method":"OnButtonMove"
+                    }
+                }
+            },
+            "eventHandlers": {
+                "onRefresh": {
+                    "type": "method",
+                    "object": "GameController",
+                    "method": "OnRefresh"
+                }
+            }
+        }
+    ]
+}
