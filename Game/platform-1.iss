@@ -50,19 +50,21 @@ objectdef gameController
     {
       ;  echo OnButtonMove: ${Context(type)} source=${Countext.Source} args=${Context.Args}
 
-; here, when the user presses an arrow key, we set the movement speed on the appropriate axis
+; here, when the user presses Left/Right (or A/D), we set the movement speed on the appropriate axis
 ; if the user presses Escape, the game terminates.
         switch ${Context.Args[controlName]}
         {
             case Esc
                 Script:End
                 break
+            case A
             case Left
                 if ${Context.Args[position]}
                     SpeedX:Set[-${BaseSpeed}]
                 else
                     SpeedX:Set[0]
                 break
+            case D
             case Right
                 if ${Context.Args[position]}
                     SpeedX:Set[${BaseSpeed}]
