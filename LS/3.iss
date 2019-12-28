@@ -1,5 +1,5 @@
 function main(string TextToDisplay)
 {
-    echo "${TextToDisplay}"
+    echo ${TextToDisplay}
 }
 

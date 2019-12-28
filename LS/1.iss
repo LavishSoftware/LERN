@@ -3,4 +3,5 @@
 function main()
 {
     echo "Hello World!"
+    ; ==> Hello World!
 }
