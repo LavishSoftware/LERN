@@ -6,7 +6,7 @@ objectdef fruit
 
 function main()
 {
-    variable fruit WhatFruit="hi"
+    variable fruit WhatFruit
     
     echo Name: ${WhatFruit.Name}
     echo Color: ${WhatFruit.Color}
