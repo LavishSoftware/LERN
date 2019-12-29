@@ -2,6 +2,12 @@
 
 This series provides your **Introduction to Programming in LavishScript**!
 
+Each example in this series provides a code (.iss) file, and a markdown (.md) file. 
+
+**Click the link below to view the formatted markdown file, then open the specified .iss file side-by-side**. That way, you are free to quickly refer to the code as you read the detailed explanation, and vice versa!
+
+* You can **split the view** to see Intro/1.iss and Intro/1.md side-by-side with the hotkey **Ctrl+\\**, or by clicking the "Split Editor Right" button at the top right corner of the Visual Studio Code window.
+
 1. [LS/1](1.md): "Hello World!"
 2. [LS/2](2.md): ```variable``` and the ```string``` type
 3. [LS/3](3.md): Parameters

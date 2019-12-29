@@ -17,15 +17,15 @@ LERN covers a range of topics, from beginner level to advanced.
 Note: Some examples are affected by known **bugs that are fixed in updated builds of Inner Space** or dxLavish. For best results, please use the latest build of dxLavish, or the latest development build of Inner Space.
 
 * **Place the LERN folder** in your dxLavish folder, or under **Inner Space/Scripts**.
-* **Open the LERN folder** with Visual Studio Code
-* **Open the file [Intro/1.iss](Intro/1.iss)**
-* There's also an **[Intro/1.md](Intro/1.md)** file with information. Right click this file in Visual Studio Code, and select **Open Preview**.
-  * Alternatively, if you've opened the file in editing mode, you can press the Visual Studio Code hotkey **Ctrl+Shift+V** to view the formatted preview.
-* You can **split the view** to see Intro/1.iss and Intro/1.md side-by-side with the hotkey **Ctrl+\\**, or by clicking the "Split Editor Right" button at the top right corner of the Visual Studio Code window.
-* **Run** LERN/Intro/1.iss in dxLavish or Inner Space via the Console with the command ```run lern/intro/1```
-* **Continue upward** in number through the Intro folder to gain a little understanding of LavishScript.
+* **Open the LERN folder** with Visual Studio Code. **The ```LERN/LS``` folder** provides your **Introduction to LavishScript**.
 
-After completing the Intro folder **it is recommended to move on specifically to LGUI2/1.iss**:
+## Scripting with LavishScript 
+* **Open the file [LS/README.md](LS/README.md)**; either click the provided link, or right click the file in Visual Studio Code, and select **Open Preview**
+  * Alternatively, if you've opened the file in editing mode, you can press the Visual Studio Code hotkey **Ctrl+Shift+V** to view the formatted preview.
+* Follow the instructions provided in each entry. Progress upward in number through the series to master the basics of LavishScript!
+
+## Graphical User Interface with LavishGUI 2
+After completing the ```LERN/LS``` folder **it is recommended to move on specifically to LGUI2/1.iss**:
 * **Open [LGUI2/1.iss](LGUI2/1.iss)** and **[LGUI2/1.json](LGUI2/1.json)** in Visual Studio Code, so that one at a time can be viewed side-by-side with **[LGUI2/1.md](LGUI2/1.md)**
 * **Run** LERN/LGUI2/1.iss in dxLavish or Inner Space via the Console with the command ```run lern/lgui2/1```
 * Use the **EndScript** command to end the script when finished. The command ```end 1``` will end LERN/lgui2/1 (full path not required). 
@@ -37,7 +37,7 @@ The LavishGUI 2 examples are broken into many separate series, covering differen
 # Topics
 Different subject are generally divided into main folders, each with one or more example series within.
 
-* **Intro**: Introduction to LavishScript
+* **LS**: Introduction to LavishScript
 * **LGUI2**: Covers many aspects of LavishGUI 2
 * **JSON**: Read and Write JSON in LavishScript
 * **Lists**: Manage lists of things in LavishScript, including conversion to and from JSON
