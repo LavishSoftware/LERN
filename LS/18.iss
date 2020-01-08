@@ -1,24 +1,9 @@
-function main(string FruitName)
+function main()
 {
-    if ${FruitName.Length}==0
-    {
-        echo "Please pass the name of a fruit as a parameter!"
-        return
-    }
+    variable int Count
 
-    switch ${FruitName}
+    for ( Count:Set[1] ; ${Count}<=10 ; Count:Inc )
     {
-        case Apple
-            echo "Known Fruit: Apple!"
-            break
-        case Banana
-            echo "Known Fruit: Banana!"
-            break
-        case Cherry
-            echo "Known Fruit: Cherry!"
-            break
-        default
-            echo "Unknown Fruit? ${FruitName~}"
-            break
+        echo ${Count}
     }
 }

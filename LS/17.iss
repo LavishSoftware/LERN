@@ -1,9 +1,11 @@
 function main()
 {
-    variable int Count
+    variable int Count=1
 
-    for ( Count:Set[1] ; ${Count}<=10 ; Count:Inc )
+    do
     {
         echo ${Count}
+        Count:Inc
     }
+    while ${Count}<=10
 }

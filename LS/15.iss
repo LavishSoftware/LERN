@@ -1,10 +1,9 @@
-function main()
+function main(int value=1)
 {
-    variable int Count=1
-
-    while ${Count}<=10
-    {
-        echo ${Count}
-        Count:Inc
-    }
+    if ${value}<10
+        echo ${value}. Warning: ${value} is less than 10
+    elseif ${value}>90
+        echo ${value}. Warning: ${value} is greater than 90
+    else
+        echo ${value}.
 }

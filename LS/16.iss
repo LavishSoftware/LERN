@@ -2,10 +2,9 @@ function main()
 {
     variable int Count=1
 
-    do
+    while ${Count}<=10
     {
         echo ${Count}
         Count:Inc
     }
-    while ${Count}<=10
 }

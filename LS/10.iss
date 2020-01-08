@@ -25,32 +25,11 @@ objectdef fruit
     }
 }
 
-objectdef banana inherits fruit
-{
-    method Initialize()
-    {
-        This(fruit):Initialize["Banana"]
-    }
-}
-
-objectdef cherry inherits fruit
-{
-    method Initialize()
-    {
-        This(fruit):Initialize["Cherry"]
-    }
-
-    member ToText()
-    {
-        return "Override: ${Name}"
-    }
-}
-
 function main()
 {
     variable fruit FruitA
-    variable banana FruitB
-    variable cherry FruitC
+    variable fruit FruitB="Banana"
+    variable fruit FruitC="Cherry"
 
     echo FruitA=${FruitA}
     echo FruitB=${FruitB}

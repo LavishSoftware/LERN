@@ -1,37 +1,39 @@
 objectdef fruit
 {
-    variable string Name
-
-    method Initialize(string initialName="Apple")
-    {
-        This:SetName["${initialName~}"]
-
-        echo Fruit Initialize: ${Name}
-    }
-
-    method Shutdown()
-    {
-        echo Fruit Shutdown: ${Name}
-    }
+    variable string Name="Apple"
+    variable string Color="Red"
 
     method SetName(string newName)
     {
         Name:Set["${newName~}"]
     }
 
+    method SetColor(string newColor)
+    {
+        Color:Set["${newColor}"]
+    }
+
     member ToText()
     {
-        return "${Name}"
+        return "${Name} ${Color}"
     }
 }
 
 function main()
 {
     variable fruit FruitA
-    variable fruit FruitB="Banana"
-    variable fruit FruitC="Cherry"
+    variable fruit FruitB
 
-    echo FruitA=${FruitA}
-    echo FruitB=${FruitB}
-    echo FruitC=${FruitC}
+    echo ------------
+    echo ** Before. 
+    echo ** FruitA: ${FruitA}
+    echo ** FruitB: ${FruitB}
+
+    FruitB:SetName["Banana"]
+    FruitB:SetColor["Yellow"]
+
+    echo ------------
+    echo ** After.
+    echo ** FruitA: ${FruitA}
+    echo ** FruitB: ${FruitB}
 }   

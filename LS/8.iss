@@ -3,16 +3,6 @@ objectdef fruit
     variable string Name="Apple"
     variable string Color="Red"
 
-    method SetName(string newName)
-    {
-        Name:Set["${newName~}"]
-    }
-
-    method SetColor(string newColor)
-    {
-        Color:Set["${newColor}"]
-    }
-
     member ToText()
     {
         return "${Name} ${Color}"
@@ -21,19 +11,11 @@ objectdef fruit
 
 function main()
 {
-    variable fruit FruitA
-    variable fruit FruitB
+    variable fruit WhatFruit
 
-    echo ------------
-    echo ** Before. 
-    echo ** FruitA: ${FruitA}
-    echo ** FruitB: ${FruitB}
+    echo WhatFruit: ${WhatFruit}
+    ; ==> WhatFruit: Apple Red
 
-    FruitB:SetName["Banana"]
-    FruitB:SetColor["Yellow"]
-
-    echo ------------
-    echo ** After.
-    echo ** FruitA: ${FruitA}
-    echo ** FruitB: ${FruitB}
+    echo WhatFruit.Name.Length: ${WhatFruit.Name.Length}
+    ; ==> WhatFruit.Name.Length: 5
 }   
