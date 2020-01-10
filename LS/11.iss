@@ -21,7 +21,7 @@ objectdef fruit
 
     member ToText()
     {
-        return "${Name}"
+        return "${Name~}"
     }
 }
 
@@ -42,7 +42,7 @@ objectdef cherry inherits fruit
 
     member ToText()
     {
-        return "Override: ${Name}"
+        return "Override: ${Name~}"
     }
 }
 

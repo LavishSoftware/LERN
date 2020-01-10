@@ -10,12 +10,12 @@ objectdef fruit
 
     method SetColor(string newColor)
     {
-        Color:Set["${newColor}"]
+        Color:Set["${newColor~}"]
     }
 
     member ToText()
     {
-        return "${Name} ${Color}"
+        return "${Name~} ${Color~}"
     }
 }
 

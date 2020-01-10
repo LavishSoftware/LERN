@@ -5,7 +5,7 @@ objectdef fruit
 
     member ToText()
     {
-        return "${Name} ${Color}"
+        return "${Name~} ${Color~}"
     }
 }
 
