@@ -1,4 +1,4 @@
-function main(string Phrase="\"Hello World!\"")
+function main(string Phrase="\"Hello \" World!\"")
 {    
     echo Hop 1 hears: "${Phrase~}"
     call Telephone_Hop2 "${Phrase~}"
