@@ -26,14 +26,14 @@ function main()
 
     echo ------------
     echo ** Before. 
-    echo ** FruitA: ${FruitA}
-    echo ** FruitB: ${FruitB}
+    echo ** FruitA: "${FruitA~}"
+    echo ** FruitB: "${FruitB~}"
 
     FruitB:SetName["Banana"]
     FruitB:SetColor["Yellow"]
 
     echo ------------
     echo ** After.
-    echo ** FruitA: ${FruitA}
-    echo ** FruitB: ${FruitB}
+    echo ** FruitA: "${FruitA~}"
+    echo ** FruitB: "${FruitB~}"
 }   

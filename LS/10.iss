@@ -6,12 +6,12 @@ objectdef fruit
     {
         This:SetName["${initialName~}"]
 
-        echo Fruit Initialize: ${Name}
+        echo Fruit Initialize: "${Name~}"
     }
 
     method Shutdown()
     {
-        echo Fruit Shutdown: ${Name}
+        echo Fruit Shutdown: "${Name~}"
     }
 
     method SetName(string newName)
@@ -31,7 +31,7 @@ function main()
     variable fruit FruitB="Banana"
     variable fruit FruitC="Cherry"
 
-    echo FruitA=${FruitA}
-    echo FruitB=${FruitB}
-    echo FruitC=${FruitC}
+    echo "FruitA=${FruitA~}"
+    echo "FruitB=${FruitB~}"
+    echo "FruitC=${FruitC~}"
 }   
