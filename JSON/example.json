@@ -1,0 +1,30 @@
+{
+    "fruits":[
+        {
+            "name":"apple",
+            "color":"red"
+        },
+        {
+            "name":"blueberry",
+            "color":"blue"
+        },
+        {
+            "name":"cherry",
+            "color":"dark red"
+        }
+    ],
+    "vegetables":[
+        {
+            "name":"asparagus",
+            "color":"green"
+        },
+        {
+            "name":"broccoli",
+            "color":"green"
+        },
+        {
+            "name":"carrot",
+            "color":"orange"
+        }
+    ]    
+}
