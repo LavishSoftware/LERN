@@ -8,16 +8,20 @@ objectdef person
     ; this Initialize method will accept a JSON value
     method Initialize(jsonvalue jo)
     {
-        FirstName:Set[${jo.Get[first_name]~}]
-        LastName:Set[${jo.Get[last_name]~}]
+        FirstName:Set["${jo.Get[first_name]~}"]
+        LastName:Set["${jo.Get[last_name]~}"]
     }
 
     ; this member defines how our object is represented in JSON
     member:string AsJSON()
     {        
-        variable jsonvalue jo={}
-        jo:Set[first_name,"${FirstName.AsJSON~}"]
-        jo:Set[last_name,"${LastName.AsJSON~}"]
+        variable jsonvalue jo
+        jo:SetValue["$$>
+        {
+            "first_name":${FirstName.AsJSON~},
+            "last_name":${LastName.AsJSON~}
+        }
+        <$$"]
         return "${jo.AsJSON~}"
         ; ==> return "{\"first_name\":\"John\",\"last_name\":\"Doe\"}"
     }

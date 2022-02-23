@@ -9,8 +9,8 @@ objectdef person
     method Initialize(string first, string last)
     {
         ; all it has to do is fill in the FirstName and LastName with the provided values
-        FirstName:Set[${first~}]
-        LastName:Set[${last~}]
+        FirstName:Set["${first~}"]
+        LastName:Set["${last~}"]
     }
 
     ; this member defines how our object is represented in JSON
