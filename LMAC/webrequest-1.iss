@@ -9,16 +9,17 @@ objectdef myController
 
     method RequestURLJSON(string url)
     {
-        variable jsonvalue joTask="$$[
+        variable jsonvalue joTask
+        joTask:SetValue["$$>
             {
                 "type":"webrequest",
                 "as":"json",
                 "object":"MyController",
-                "method":"OnRequestComplete"
+                "method":"OnRequestComplete",
+                "url":${url.AsJSON~}
             }
-            ]$$"
+            <$$"]
             
-        joTask:Set["url","${url.AsJSON~}"]
         TaskManager:BeginTask["${joTask.AsJSON~}"]
     }
 
