@@ -123,7 +123,7 @@
                                   "pullFormat":"${This.Object.Data.Get[wearsGlasses]}",
                                   "pullReplaceNull":"",
                                   "pushFormat": [
-                                      "This.Object.Data:SetInteger[wearsGlasses,\"",
+                                      "This.Object.Data:SetBool[wearsGlasses,\"",
                                       "\"]"
                                   ]
                                 },
