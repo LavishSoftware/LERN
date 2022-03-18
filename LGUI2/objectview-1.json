@@ -1,0 +1,138 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "templates":{
+        "editor.data":{
+            "people":[
+                {
+                    "firstName":"John",
+                    "lastName":"Doe",
+                    "birthYear":1942,
+                    "wearsGlasses":true
+                },
+                {
+                    "firstName":"John",
+                    "lastName":"Public",
+                    "birthYear":1970,
+                    "wearsGlasses":false
+                },
+                {
+                    "firstName":"Jane",
+                    "lastName":"Doe",
+                    "birthYear":1963,
+                    "wearsGlasses":false
+                }
+            ]
+        },
+        "editor.personView":{
+            "jsonTemplate":"listboxitem",
+            "padding":2,
+            "content":{
+                "type":"stackpanel",
+                "orientation":"vertical",
+                "children":[
+                    {
+                       "type":"textblock",
+                        "textBinding":{
+                        "pullFormat":"${_CONTEXTITEMDATA_.Get[firstName]} ${_CONTEXTITEMDATA_.Get[lastName]} (${_CONTEXTITEMDATA_.Get[birthYear]})"
+                         }                                 
+                    }
+                ]
+            }
+        }
+    },
+    "elements": [
+        {
+            "type": "window",
+            "title": "objectview Example 1",
+            "name": "editor.window",
+            "width":500,
+            "height":300,
+            "content": {
+                "type": "dockpanel",
+                "horizontalAlignment": "stretch",
+                "verticalAlignment": "stretch",
+                "children":[
+                    {
+                        "type":"listbox",
+                        "_dock":"left",
+                        "width":150,
+                        "verticalAlignment": "stretch",
+                        "name":"editor.people",
+                        "itemsBinding":{
+                            "pullFormat":"${LGUI2.Skin[default].Template[editor.data].Get[people]}",
+                            "pullOnce": true
+                        },
+                        "itemViewGenerators": {
+                            "default":{
+                                "type":"template",
+                                "template":"editor.personView"
+                            }
+                        }                        
+                    },
+                    {
+                        "type":"objectview",
+                        "_dock":"top",
+                        "verticalAlignment": "stretch",
+                        "horizontalAlignment": "stretch",
+                        "objectBinding": {
+                            "pullFormat":"${LGUI2.Element[editor.people].SelectedItem}"
+                        },
+                        "properties": [
+                            {
+                                "name":"First Name",
+                                "dataBinding":{
+                                  "pullFormat":"${This.Object.Data.Get[firstName]}",
+                                  "pullReplaceNull":"",
+                                  "pushFormat": [
+                                      "This.Object.Data:SetString[firstName,\"",
+                                      "\"]"
+                                  ]
+                                },
+                                "editTemplate":"propertyview.textbox"                            
+                            },
+                            {
+                                "name":"Last Name",
+                                "dataBinding":{
+                                  "pullFormat":"${This.Object.Data.Get[lastName]}",
+                                  "pullReplaceNull":"",
+                                  "pushFormat": [
+                                      "This.Object.Data:SetString[lastName,\"",
+                                      "\"]"
+                                  ]
+                                },
+                                "editTemplate":"propertyview.textbox"                            
+                            },
+                            {
+                                "name":"Birth Year",
+                                "dataBinding":{
+                                  "pullFormat":"${This.Object.Data.Get[birthYear]}",
+                                  "pullReplaceNull":"",
+                                  "pushFormat": [
+                                      "This.Object.Data:SetInteger[birthYear,\"",
+                                      "\"]"
+                                  ]
+                                },
+                                "controlData": {
+                                    "textBindingUsesFocus":true
+                                },
+                                "editTemplate":"propertyview.textbox"                            
+                            },
+                            {
+                                "name":"Wears Glasses",
+                                "dataBinding":{
+                                  "pullFormat":"${This.Object.Data.Get[wearsGlasses]}",
+                                  "pullReplaceNull":"",
+                                  "pushFormat": [
+                                      "This.Object.Data:SetInteger[wearsGlasses,\"",
+                                      "\"]"
+                                  ]
+                                },
+                                "editTemplate":"propertyview.checkbox"                            
+                            }
+                        ]
+                    }
+                ]               
+            }
+        }
+    ]
+}
