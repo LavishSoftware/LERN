@@ -4,7 +4,7 @@
         {
             "type": "window",
             "title": "Button Example",
-            "name": "button.window",
+            "name": "button-1.window",
             "content": {
                 "type": "button",
                 "content":{

@@ -4,7 +4,7 @@
         {
             "type": "window",
             "title": "Panel Example",
-            "name": "panel.window",
+            "name": "panel-2.window",
             "content": {
                 "type": "panel",
                 "width":100,

@@ -1,4 +1,4 @@
-objectdef lgui2_controller
+objectdef checkbox2_controller
 {
     variable bool CheckedState=1
 
@@ -13,7 +13,7 @@ objectdef lgui2_controller
     }
 }
 
-variable(global) lgui2_controller LGUI2Controller
+variable(global) checkbox2_controller CheckBox2Controller
  
 function main()
 {

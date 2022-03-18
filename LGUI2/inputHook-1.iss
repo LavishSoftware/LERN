@@ -1,4 +1,4 @@
-objectdef lgui2_controller
+objectdef inputhook1_controller
 {
     method Initialize()
     {
@@ -11,7 +11,7 @@ objectdef lgui2_controller
     }
 }
 
-variable(global) lgui2_controller LGUI2Controller
+variable(global) inputhook1_controller InputHook1Controller
  
 function main()
 {

@@ -4,7 +4,7 @@
         {
             "type": "window",
             "title": "ImageBox Example",
-            "name": "imagebox.window",
+            "name": "imagebox-1.window",
             "content": {
                 "type": "imagebox",
                 "margin": [ 1, 1, 1, 1 ],

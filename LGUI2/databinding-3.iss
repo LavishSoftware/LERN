@@ -1,4 +1,4 @@
-objectdef lgui2_controller
+objectdef databinding3_controller
 {  
     method Initialize()
     {
@@ -34,7 +34,7 @@ objectdef lgui2_controller
     
 }
 
-variable(global) lgui2_controller LGUI2Controller
+variable(global) databinding3_controller DataBinding3Controller
  
 function main()
 {

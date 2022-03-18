@@ -4,7 +4,7 @@
         {
             "type": "window",
             "title": "Input Hook Example",
-            "name": "inputhook.window",
+            "name": "inputhook-1.window",
             "content": {
                 "type": "textblock",
                 "text":"Press any key!",

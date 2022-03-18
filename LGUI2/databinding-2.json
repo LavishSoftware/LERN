@@ -4,12 +4,12 @@
         {
             "type": "window",
             "title": "Data Binding Example",
-            "name": "databinding.window",
+            "name": "databinding-2.window",
             "width":300,
             "content": {
                 "type": "checkbox",
-                "checkedBinding":"LGUI2Controller.CheckedState",
-                "content":"Data Bound to LGUI2Controller.CheckedState=${LGUI2Controller.CheckedState}"
+                "checkedBinding":"DataBinding2Controller.CheckedState",
+                "content":"Data Bound to DataBinding2Controller.CheckedState=${DataBinding2Controller.CheckedState}"
             }
         }
     ]

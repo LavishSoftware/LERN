@@ -1,4 +1,4 @@
-objectdef lgui2_controller
+objectdef table1_controller
 {
 
     method Initialize()
@@ -12,7 +12,7 @@ objectdef lgui2_controller
     }
 }
 
-variable lgui2_controller LGUI2Controller
+variable table1_controller Table1Controller
  
 function main()
 {

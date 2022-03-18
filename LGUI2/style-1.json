@@ -3,8 +3,8 @@
     "elements": [
         {
             "type": "window",
-            "title": "LGUI2 Trigger Example",
-            "name": "trigger-1.window",
+            "title": "LGUI2 Style Example 1",
+            "name": "style-1.window",
             "minSize": [200,60],
             "content": {
                 "type": "imagebox",

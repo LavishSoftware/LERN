@@ -37,7 +37,7 @@
     "elements": [
         {
             "type": "window",
-            "name": "soundboard-1.window",
+            "name": "table-1.window",
             "title": "Super Amazing Windows Soundboard",
             "width":400,
             "height":400,

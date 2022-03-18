@@ -1,4 +1,4 @@
-objectdef lgui2_controller
+objectdef textblock1_controller
 {
     method Initialize()
     {
@@ -11,7 +11,7 @@ objectdef lgui2_controller
     }
 }
 
-variable(global) lgui2_controller LGUI2Controller
+variable(global) textblock1_controller TextBlock1Controller
  
 function main()
 {

@@ -1,4 +1,4 @@
-objectdef lgui2_controller
+objectdef combobox1_controller
 {
     method Initialize()
     {
@@ -16,7 +16,7 @@ objectdef lgui2_controller
     }
 }
 
-variable(global) lgui2_controller LGUI2Controller
+variable(global) combobox1_controller ComboBox1Controller
  
 function main()
 {

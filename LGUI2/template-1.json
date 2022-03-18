@@ -11,8 +11,8 @@
     "elements": [
         {
             "type": "window",
-            "title": "Template Example",
-            "name": "template.window",
+            "title": "Template Example 1",
+            "name": "template-1.window",
             "backgroundBrush":{
                 "color":"#ffffff"
             },

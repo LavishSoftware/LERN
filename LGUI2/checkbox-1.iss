@@ -1,4 +1,4 @@
-objectdef lgui2_controller
+objectdef checkbox1_controller
 {
     method Initialize()
     {
@@ -11,7 +11,7 @@ objectdef lgui2_controller
     }
 }
 
-variable(global) lgui2_controller LGUI2Controller
+variable(global) checkbox1_controller CheckBox1Controller
  
 function main()
 {

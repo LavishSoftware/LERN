@@ -4,7 +4,7 @@
         {
             "type": "window",
             "title": "Event Handler Example",
-            "name": "eventhandler.window",
+            "name": "eventhandler-1.window",
             "content": {
                 "type": "button",
                 "content":"Click me!",

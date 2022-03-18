@@ -4,7 +4,7 @@
         {
             "type": "window",
             "title": "Data Binding Example",
-            "name": "databinding.window",
+            "name": "databinding-1.window",
             "width":200,
             "content": {
                 "type": "textblock",

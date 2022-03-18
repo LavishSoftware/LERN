@@ -3,13 +3,13 @@
     "elements": [
         {
             "type": "window",
-            "title": "Checkbox Example",
-            "name": "checkbox.window",
+            "title": "Checkbox Example 2",
+            "name": "checkbox-2.window",
             "width":300,
             "content": {
                 "type": "checkbox",
-                "checkedBinding":"LGUI2Controller.CheckedState",
-                "content":"Data Bound to LGUI2Controller.CheckedState=${LGUI2Controller.CheckedState}"
+                "checkedBinding":"CheckBox2Controller.CheckedState",
+                "content":"Data Bound to LGUI2Controller.CheckedState=${CheckBox2Controller.CheckedState}"
             }
         }
     ]

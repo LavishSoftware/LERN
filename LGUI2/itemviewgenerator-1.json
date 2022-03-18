@@ -42,7 +42,7 @@
         {
             "type": "window",
             "title": "Item View Generator Example",
-            "name": "itemviewgenerator.window",
+            "name": "itemviewgenerator-1.window",
             "width":300,
             "content": {
                 "type": "listbox",
@@ -54,7 +54,7 @@
                 "itemViewGenerators": {
                     "default":{
                         "type":"method",
-                        "object": "LGUI2Controller",
+                        "object": "ItemViewGenerator1Controller",
                         "method": "GetAudioStreamView"
                     }
                 }

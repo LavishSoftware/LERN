@@ -44,7 +44,7 @@
         {
             "type": "window",
             "title": "objectview Example 1",
-            "name": "editor.window",
+            "name": "objectview-1.window",
             "width":500,
             "height":300,
             "content": {

@@ -3,8 +3,8 @@
     "elements": [
         {
             "type": "window",
-            "title": "Checkbox Example",
-            "name": "checkbox.window",
+            "title": "Checkbox Example 1",
+            "name": "checkbox-1.window",
             "content": {
                 "type": "checkbox",
                 "content":{

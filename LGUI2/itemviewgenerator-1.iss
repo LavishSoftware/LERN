@@ -1,4 +1,4 @@
-objectdef lgui2_controller
+objectdef itemviewgenerator1_controller
 {  
     method Initialize()
     {
@@ -51,7 +51,7 @@ objectdef lgui2_controller
     
 }
 
-variable(global) lgui2_controller LGUI2Controller
+variable(global) itemviewgenerator1_controller ItemViewGenerator1Controller
  
 function main()
 {

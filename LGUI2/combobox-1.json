@@ -3,8 +3,8 @@
     "elements": [
         {
             "type": "window",
-            "title": "LGUI2 Editor Example",
-            "name": "editor.window",
+            "title": "ComboBox Example 1",
+            "name": "combobox-1.window",
             "width": 500,
             "content": {
                 "type": "stackpanel",
@@ -28,7 +28,7 @@
                         "eventHandlers": {
                             "onSelectionChanged": {
                                 "type": "method",
-                                "object": "LGUI2Controller",
+                                "object": "ComboBox1Controller",
                                 "method": "OnSelectionChanged"
                             }
                         }

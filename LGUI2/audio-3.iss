@@ -1,4 +1,4 @@
-objectdef lgui2_controller
+objectdef audio3_controller
 {
 
     method Initialize()
@@ -12,7 +12,7 @@ objectdef lgui2_controller
     }
 }
 
-variable lgui2_controller LGUI2Controller
+variable audio3_controller Audio3Controller
  
 function main()
 {

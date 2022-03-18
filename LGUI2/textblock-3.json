@@ -3,8 +3,8 @@
     "elements": [
         {
             "type": "window",
-            "title": "TextBlock Example",
-            "name": "textblock.window",
+            "title": "TextBlock Example 3",
+            "name": "textblock-3.window",
             "width":200,
             "content": {
                 "type": "textblock",
