@@ -28,7 +28,7 @@ objectdef lgui2_controller
                     {
                         "_dock":"left",
                         "type":"textblock",
-                        "text":"${Context.Args[name]}"
+                        "text":${Context.Args[name].AsJSON~}
                     },
                     {
                         "_dock":"right",
@@ -38,7 +38,7 @@ objectdef lgui2_controller
                             "onPress":{
                                 "type":"audio",
                                 "voiceName":"ui sound",
-                                "streamName":"${Context.Args[name]}"
+                                "streamName":${Context.Args[name].AsJSON~}
                             }
                         }
                     }
