@@ -1,5 +1,5 @@
 ; what if we want to pull values FROM json to fill out our object
-; we're going to match this up with the JSON object we made up in AsJSON in example12.iss
+; we're going to match this up with the JSON object we made up in AsJSON in serialize-1.iss
 
 objectdef person
 {
@@ -18,7 +18,7 @@ objectdef person
         */
 
         ; first let's echo what we were given, so we have a visual understanding. it should look like the above comment.
-        echo SetFromJSON: ${jo.AsJSON.Escape}
+        echo SetFromJSON: ${jo.AsJSON~}
 
         ; If jsonvalue contains a JSON object, then jsonvalue is providing members and methods from the jsonobject type, including the "Get" member.
         ; here's how we can access our properties:
@@ -27,11 +27,11 @@ objectdef person
 
         ; now we just need to put them into our LavishScript variables.
         FirstName:Set["${jo.Get[first_name]}"]
-        ; this is okay... since we hard-coded the value John as the first_name, but if the first name was  .. Jack "the ripper"   then the result of the .Get should ideally be .Escaped
-        ; as in:  jo.Get[____].Escape
+        ; this is okay... since we hard-coded the value John as the first_name, but if the first name was  .. Jack "the ripper"   then the result of the .Get should ideally be escaped
+        ; as in:  jo.Get[____]~
 
-        FirstName:Set["${jo.Get[first_name].Escape}"]
-        LastName:Set["${jo.Get[last_name].Escape}"]        
+        FirstName:Set["${jo.Get[first_name]~}"]
+        LastName:Set["${jo.Get[last_name]~}"]        
     }
 
        ; if our objectdef has a member called "AsJSON", then various other functionality can use it in order to get the object as JSON
@@ -39,9 +39,9 @@ objectdef person
     {
         ; see example12.iss
         variable jsonvalue jo={}
-        jo:Set[first_name,"${FirstName.AsJSON.Escape}"]
-        jo:Set[last_name,"${LastName.AsJSON.Escape}"]
-        return "${jo.AsJSON.Escape}"
+        jo:Set[first_name,"${FirstName.AsJSON~}"]
+        jo:Set[last_name,"${LastName.AsJSON~}"]
+        return "${jo.AsJSON~}"
         ; ==> return "{\"first_name\":\"John\",\"last_name\":\"Doe\"}"
     }
 }

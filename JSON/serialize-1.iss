@@ -40,22 +40,22 @@ objectdef person
         ; That's fine. but if FirstName contains characters that would need to be escaped to be valid, there's no escaping happening.
         ; obviously right now, FirstName is hard-coded and does not contain anything like that.
 
-        ; string has a member called "Escape" to handle escaping for us:
-        jo:Set[first_name,"\"${FirstName.Escape}\""]
+        ; LavishScript has a special ~ character to handle escaping for us:
+        jo:Set[first_name,"\"${FirstName~}\""]
         ; This still produces the desired result
 
         ; Taking it one step further, string has an "AsJSON" member to take our string and make it a valid JSON string (putting it inside quotes)
         ; That way, we don't have to hard-code escaped quotes for string variables but add everything else (ints, etc) to JSON objects without hard-coded escaped quotes.
         ; Consistency is nice.
-        jo:Set[first_name,"${FirstName.AsJSON.Escape}"]
+        jo:Set[first_name,"${FirstName.AsJSON~}"]
         ; if we returned now, that's... {"first_name":"John"}
 
         ; Finally, let's add the last name as well.
 
-        jo:Set[last_name,"${LastName.AsJSON.Escape}"]
+        jo:Set[last_name,"${LastName.AsJSON~}"]
         ; if we returned now, that's... {"first_name":"John","last_name":"Doe"}
 
-        return "${jo.AsJSON.Escape}"
+        return "${jo.AsJSON~}"
         ; ==> return "{\"first_name\":\"John\",\"last_name\":\"Doe\"}"
     }
 }
