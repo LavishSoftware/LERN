@@ -1,0 +1,32 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    "templates":{
+    },
+    "elements": [
+        {
+            "type": "window",
+            "title": "FilePicker Example",
+            "name": "filepicker-1.window",
+            "width":600,
+            "height":400,
+            "content": {
+                "type": "filepicker",
+                "name":"filepicker-1.filepicker",
+                "margin": [ 1, 1, 1, 1 ],
+                "horizontalAlignment": "stretch",
+                "verticalAlignment": "stretch",
+                "requireExisting":true,
+                "multiselect":false,
+                "path": ".",
+                "wildcard":"*.iss",
+                "eventHandlers": {
+                    "onFinalized":{
+                        "type":"method",
+                        "object": "filepicker1Controller",
+                        "method": "OnFinalized"
+                    }
+                }
+            }
+        }
+    ]
+}
