@@ -1,0 +1,52 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/ldioPackage.json",
+    "patches": [
+        [            
+            {
+                "type":"route",
+                "name": "inputs",
+                "commands": {
+                    "kb-press":[
+                        {
+                            "filter": [
+                                {
+                                    "p":1,
+                                    "value":"A"
+                                }                               
+                            ],
+                            "command": "pressed-A",
+                            "args": []
+                        },
+                        {
+                            "filter":[
+                                {
+                                    "default":true
+                                }
+                            ]
+                        }
+                    ],
+                    "kb-release":[
+                        {
+                            "filter": [
+                                {
+                                    "p":1,
+                                    "value":"A"
+                                }                               
+                            ],
+                            "command": "released-A",
+                            "args": []
+                        },
+                        {
+                            "filter":[
+                                {
+                                    "default":true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "log"
+        ]
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/ldioPackage.json",
+    "patches": [     
+        [
+            {
+                "type":"device-out",
+                "name":"synth",
+                "device": "Microsoft GS Wavetable Synth"
+            },
+            {
+                "type":"log"
+            }
+        ],
+        [
+            {
+                "name":"timer-1",
+                "type":"timer",
+                "command":["pulse"],
+                "interval": 0.5            
+            },
+            {
+                "type":"sequence",                
+                "sequence": [
+                [
+                    "on 0 60 127",
+                    "off 0 67 0"
+                ],
+                [
+                    "on 0 61 127",
+                    "off 0 60 0"
+                ],
+                [
+                    "on 0 62 127",
+                    "off 0 61 0"
+                ],
+                [
+                    "on 0 63 127",
+                    "off 0 62 0"
+                ],
+                [
+                    "on 0 64 127",
+                    "off 0 63 0"
+                ],
+                [
+                    "on 0 65 127",
+                    "off 0 64 0"
+                ],
+                [
+                    "on 0 66 127",
+                    "off 0 65 0"
+                ],
+                [
+                    "on 0 67 127",
+                    "off 0 66 0"
+                ]
+                ]
+            },
+            "synth"
+        ]
+    ]
+}

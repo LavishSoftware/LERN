@@ -1,0 +1,62 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/ldioPackage.json",
+    "patches": [
+        [
+            {
+                "type":"lavishscript",
+                "method":"OnEscape",
+                "object":"LDIOController_KBM3",
+                "name":"on-escape"
+            }
+        ],
+        [            
+            {
+                "type":"route",
+                "name": "inputs",
+                "commands": {
+                    "kb-press":[
+                        {
+                            "filter": [
+                                {
+                                    "p":1,
+                                    "value":"Esc"
+                                }                               
+                            ],
+                            "command": "pressed-Esc",
+                            "args": [],
+                            "patch": "on-escape"
+                        },
+                        {
+                            "filter":[
+                                {
+                                    "default":true
+                                }
+                            ]
+                        }
+                    ],
+                    "kb-release":[
+                        {
+                            "filter": [
+                                {
+                                    "p":1,
+                                    "value":"Esc"
+                                }                               
+                            ],
+                            "command": "released-Esc",
+                            "args": [],
+                            "patch": "on-escape"
+                        },
+                        {
+                            "filter":[
+                                {
+                                    "default":true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "log"
+        ]
+    ]
+}
