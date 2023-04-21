@@ -1,0 +1,24 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/ldioPackage.json",
+    "patchTemplates": {
+        "net-server.client":{
+            "type":"log",
+            "prefix":"net-server.client"
+        }
+    },
+    "patches": [     
+        [
+            {
+                "type":"net-server",
+                "name": "net-server",
+                "port":12034,
+                "clientFeedbackPatchTemplate":"net-server.client",
+                "feedback":{
+                    "type":"log",
+                    "prefix":"net-server-feedback"
+                }
+            },
+            "log"
+        ]
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/ldioPackage.json",
+    "patchTemplates": {
+        "net-server.client":{
+            "type":"log",
+            "prefix":"net-server.client",
+            "patch":"net-server-out"
+        }
+    },
+    "patches": [     
+        [
+            {
+                "type":"binary-data",
+                "name":"video-capture-in"
+            },
+            {
+                "type":"route",
+                "name":"video-capture-out",
+                "commands":{
+                    "video-frame":{
+                        "output":[
+                            "net-client-send-binary \"video-frame\"",
+                            "video-frame"
+                        ]
+                    }
+                }
+            }
+        ],
+        [
+            {
+                "type":"net-server",
+                "name": "net-server",
+                "port":12034,
+                "clientFeedbackPatchTemplate":"net-server.client",
+                "feedback":{
+                    "type":"lavishscript",
+                    "object":"LDIOController_NetServer2",
+                    "method":"OnFeedback",
+                    "patch":"log"
+                }                
+            },
+            "log"
+        ]
+    ]
+}

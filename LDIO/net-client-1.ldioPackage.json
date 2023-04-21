@@ -1,0 +1,16 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/ldioPackage.json",    
+    "patches": [     
+        [
+            {
+                "type":"net-client",
+                "name": "net-client-out",
+                "feedback":{
+                    "type":"log",
+                    "prefix":"net-client-out-feedback"
+                }
+            },
+            "log"
+        ]
+    ]
+}

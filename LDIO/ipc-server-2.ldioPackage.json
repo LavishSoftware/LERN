@@ -1,0 +1,45 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/ldioPackage.json",
+    "patchTemplates": {
+        "ipc-server.client":{
+            "type":"log",
+            "prefix":"ipc-server.client",
+            "patch":"ipc-server-out"
+        }
+    },
+    "patches": [     
+        [
+            {
+                "type":"binary-data",
+                "name":"video-capture-in"
+            },
+            {
+                "type":"route",
+                "name":"video-capture-out",
+                "commands":{
+                    "video-frame":{
+                        "output":[
+                            "ipc-client-send-binary \"video-frame\"",
+                            "video-frame"
+                        ]
+                    }
+                }
+            }
+        ],
+        [
+            {
+                "type":"ipc-server",
+                "name": "ipc-server",
+                "pipe":"porn",
+                "clientFeedbackPatchTemplate":"ipc-server.client",
+                "feedback":{
+                    "type":"lavishscript",
+                    "object":"LDIOController_IPCServer2",
+                    "method":"OnFeedback",
+                    "patch":"log"
+                }                
+            },
+            "log"
+        ]
+    ]
+}

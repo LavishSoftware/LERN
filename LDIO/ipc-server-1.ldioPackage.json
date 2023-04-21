@@ -1,0 +1,24 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/ldioPackage.json",
+    "patchTemplates": {
+        "ipc-server.client":{
+            "type":"log",
+            "prefix":"ipc-server.client"
+        }
+    },
+    "patches": [     
+        [
+            {
+                "type":"ipc-server",
+                "name": "ipc-server",
+                "pipe":"boobies",
+                "clientFeedbackPatchTemplate":"ipc-server.client",
+                "feedback":{
+                    "type":"log",
+                    "prefix":"ipc-server-feedback"
+                }
+            },
+            "log"
+        ]
+    ]
+}

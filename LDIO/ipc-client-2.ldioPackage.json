@@ -1,0 +1,29 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/ldioPackage.json",    
+    "patches": [     
+        [
+            {
+                "type":"log",
+                "name":"video-capture-output"
+            },
+            {
+                "type":"lgui2element",
+                "element":"ipc-client-2.output",
+                "commands":{
+                    "video-frame":{
+                        "command":"image",
+                        "args":["video-frame"]
+                    }
+                }
+            }
+        ],
+        [
+            {
+                "type":"ipc-client",
+                "name": "ipc-client-out",
+                "feedback":"video-capture-output"
+            },
+            "log"
+        ]
+    ]
+}

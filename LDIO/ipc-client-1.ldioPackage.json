@@ -1,0 +1,16 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/ldioPackage.json",    
+    "patches": [     
+        [
+            {
+                "type":"ipc-client",
+                "name": "ipc-client-out",
+                "feedback":{
+                    "type":"log",
+                    "prefix":"ipc-client-out-feedback"
+                }
+            },
+            "log"
+        ]
+    ]
+}
