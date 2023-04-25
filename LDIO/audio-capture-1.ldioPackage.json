@@ -1,0 +1,20 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/ldioPackage.json",
+    "patches": [
+        [
+            {
+                "type":"binary-data",
+                "name":"audio-capture-in"        
+            },
+            {
+                "type":"log"
+            },
+            {
+                "type":"audio-stream",
+                "name":"audio-stream-out",
+                "voice":"audio-capture-1",
+                "streamName":"audio-capture-1"
+            }
+        ]
+    ]
+}

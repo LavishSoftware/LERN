@@ -1,0 +1,45 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/ldioPackage.json",    
+    "patches": [     
+        [
+            {
+                "type":"log",
+                "name":"video-capture-output"
+            },
+            {
+                "type":"route",
+                "commands":{
+                    "z-video-frame":{
+                        "command":"inflate",
+                        "args":["z-video-frame","video-frame"]
+                    }
+                }                
+            },
+            {
+                "type":"zlib"
+            },
+            {
+                "type":"log",
+                "name":"post-zlib"
+            },
+            {
+                "type":"lgui2element",
+                "element":"net-client-3.output",
+                "commands":{
+                    "z-inflated":{
+                        "command":"image",
+                        "args":["video-frame"]
+                    }
+                }
+            }
+        ],
+        [
+            {
+                "type":"net-client",
+                "name": "net-client-out",
+                "feedback":"video-capture-output"
+            },
+            "log"
+        ]
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "$schema":"http://www.lavishsoft.com/schema/lgui2Package.json",
+    "elements": [
+        {
+            "type":"window",
+            "name":"net-client-3.window",
+            "title": "LDIO to LGUI2 Video Capture",
+            "width": 500,
+            "height": 300,
+            "content":{
+                "type":"canvas",                
+                "name":"net-client-3.output",
+                "horizontalAlignment": "stretch",
+                "verticalAlignment": "stretch",
+                "backgroundBrush":{
+                    "color":"#ffffffff"
+                }                
+            }
+        }
+    ]
+}
