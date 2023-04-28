@@ -1,0 +1,30 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/ldioPackage.json",    
+    "patches": [     
+        [
+            {
+                "type":"binary-cache",
+                "name":"video-capture-input"
+            }
+        ],
+        [
+            {
+                "type":"binary-clip",
+                "name":"binary-clip"                
+            },
+            {
+                "type":"log"
+            },
+            {
+                "type":"lgui2element",
+                "element":"binary-clip-1.output",
+                "commands":{
+                    "video-frame":{
+                        "command":"image",
+                        "args":["video-frame"]
+                    }
+                }
+            }
+        ]
+    ]
+}
