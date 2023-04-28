@@ -1,0 +1,105 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/ldioPackage.json",
+    "chordBooks": {
+            "Canon in D":{
+            "D":"D",
+            "A":"A",
+            "Bb":"Bm",
+            "F":"F#m",
+            "G":"G"
+        }
+    },
+    "patches": [     
+        [
+            {
+                "type":"device-out",
+                "name":"synth",
+                "device": "Microsoft GS Wavetable Synth"
+            },
+            {
+                "type":"log"
+            }
+        ],
+        [
+            {
+                "type":"guitar",
+                "octave": 3,
+                "name": "guitar-1",
+                "channel": 2,
+                "instrument":25
+            },
+            "synth"
+        ],      
+        [
+            {
+                "type":"piano",
+                "octave": 5,
+                "name": "guitar-piano",
+                "channel": 2,
+                "sharps": false,
+                "chords":"Canon in D"
+            },
+            "guitar-1"
+        ],
+        [
+            {
+                "type":"roll",
+                "name":"guitar-canon",
+                "tempo":90,                
+                "commands": [
+                    "via guitar-piano piano-chords \"canon in D\"",
+                    "via guitar-piano piano-chord-on \"D\"",
+                    "guitar-strum 1.0 1 3 0.02",
+                    "+0.5 guitar-strum 1.0 1 6 0.02",
+                    "+0.5 guitar-strum 1.0 1 3 0.02",
+                    "+1.0 guitar-strum-up 1.0 1 6 0.02",
+                    "+1.0 via guitar-piano piano-chord-off \"D\"",
+                    "via guitar-piano piano-chord-on \"A\"",
+                    "guitar-strum 1.0 1 3 0.02",
+                    "+0.5 guitar-strum 1.0 1 6 0.02",
+                    "+0.5 guitar-strum 1.0 1 3 0.02",
+                    "+1.0 guitar-strum-up 1.0 1 6 0.02",
+                    "+1.0 via guitar-piano piano-chord-off \"A\"",
+                    "via guitar-piano piano-chord-on \"Bm\"",
+                    "guitar-strum 1.0 1 3 0.02",
+                    "+0.5 guitar-strum 1.0 1 6 0.02",
+                    "+0.5 guitar-strum 1.0 1 3 0.02",
+                    "+1.0 guitar-strum-up 1.0 1 6 0.02",
+                    "+1.0 via guitar-piano piano-chord-off \"Bm\"",
+                    "via guitar-piano piano-chord-on \"F#m\"",
+                    "guitar-strum 1.0 1 3 0.02",
+                    "+0.5 guitar-strum 1.0 1 6 0.02",
+                    "+0.5 guitar-strum 1.0 1 3 0.02",
+                    "+1.0 guitar-strum-up 1.0 1 6 0.02",
+                    "+1.0 via guitar-piano piano-chord-off \"F#m\"",
+                    "via guitar-piano piano-chord-on \"G\"",
+                    "guitar-strum 1.0 1 3 0.02",
+                    "+0.5 guitar-strum 1.0 1 6 0.02",
+                    "+0.5 guitar-strum 1.0 1 3 0.02",
+                    "+1.0 guitar-strum-up 1.0 1 6 0.02",
+                    "+1.0 via guitar-piano piano-chord-off \"G\"",
+                    "via guitar-piano piano-chord-on \"D\"",
+                    "guitar-strum 1.0 1 3 0.02",
+                    "+0.5 guitar-strum 1.0 1 6 0.02",
+                    "+0.5 guitar-strum 1.0 1 3 0.02",
+                    "+1.0 guitar-strum-up 1.0 1 6 0.02",
+                    "+1.0 via guitar-piano piano-chord-off \"D\"",
+                    "via guitar-piano piano-chord-on \"G\"",
+                    "guitar-strum 1.0 1 3 0.02",
+                    "+0.5 guitar-strum 1.0 1 6 0.02",
+                    "+0.5 guitar-strum 1.0 1 3 0.02",
+                    "+1.0 guitar-strum-up 1.0 1 6 0.02",
+                    "+1.0 via guitar-piano piano-chord-off \"G\"",
+                    "via guitar-piano piano-chord-on \"A\"",
+                    "guitar-strum 1.0 1 3 0.02",
+                    "+0.5 guitar-strum 1.0 1 6 0.02",
+                    "+0.5 guitar-strum 1.0 1 3 0.02",
+                    "+1.0 guitar-strum-up 1.0 1 6 0.02",
+                    "+1.0 via guitar-piano piano-chord-off \"A\"",
+                    "loop"
+                ]
+            },
+            "guitar-1"
+        ]        
+    ]
+}
