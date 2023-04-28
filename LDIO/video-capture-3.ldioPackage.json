@@ -1,0 +1,43 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/ldioPackage.json",    
+    "patches": [     
+        [
+            {
+                "type":"binary-data",
+                "name": "video-capture-input1"
+            },
+            {
+                "type":"log"                
+            },
+            {
+                "type":"lgui2element",
+                "element":"video-capture-3.output1",
+                "commands":{
+                    "video-frame":{
+                        "command":"image",
+                        "args":["video-frame"]
+                    }
+                }
+            }
+        ],
+        [
+            {
+                "type":"binary-data",
+                "name": "video-capture-input2"
+            },
+            {
+                "type":"log"                
+            },
+            {
+                "type":"lgui2element",
+                "element":"video-capture-3.output2",
+                "commands":{
+                    "video-frame":{
+                        "command":"image",
+                        "args":["video-frame"]
+                    }
+                }
+            }
+        ]
+    ]
+}

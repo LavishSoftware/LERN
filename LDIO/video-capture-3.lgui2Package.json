@@ -1,0 +1,40 @@
+{
+    "$schema":"http://www.lavishsoft.com/schema/lgui2Package.json",
+    "elements": [
+        {
+            "type":"window",
+            "name":"video-capture-3.window",
+            "title": "LDIO to LGUI2 Video Capture",
+            "width": 1000,
+            "height": 300,
+            "content":
+            {
+                "type":"dockpanel",
+                "horizontalAlignment": "stretch",
+                "verticalAlignment": "stretch",
+                "children":[
+                    {
+                        "_dock":"left",
+                        "type":"canvas",                
+                        "name":"video-capture-3.output1",
+                        "widthFactor":0.5,
+                        "verticalAlignment": "stretch",
+                        "backgroundBrush":{
+                            "color":"#ffffffff"
+                        }                
+                    },
+                    {
+                        "_dock":"left",
+                        "type":"canvas",                
+                        "name":"video-capture-3.output2",
+                        "horizontalAlignment": "stretch",
+                        "verticalAlignment": "stretch",
+                        "backgroundBrush":{
+                            "color":"#ffffffff"
+                        }                
+                    }                
+                ]
+            }
+        }
+    ]
+}
