@@ -2,7 +2,6 @@ objectdef ldio_controller_midiout2
 {
     method Initialize()
     {
-        ldio:LoadPackageFile[midi-out-2.ldioPackage.json]
     }
 
     method Shutdown()
@@ -17,6 +16,7 @@ objectdef ldio_controller_midiout2
 
     method Go()
     {
+        ldio:LoadPackageFile[midi-out-2.ldioPackage.json]
         ; start the timer
         ldiopatch.Get[timer-1]:Send[start]
     }
