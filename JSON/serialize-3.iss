@@ -7,14 +7,14 @@ objectdef person
     variable string LastName
 
     ; here's our new initializer, which can be used by index:FromJSON to initialize our person from JSON
-    method Initialize(jsonvalue jo)
+    method Initialize(jsonvalueref jo)
     {
         ; we'll reference the parameter and do the actual work in our own FromJSON method
         This:FromJSON[jo]
     }
 
     ; this one matches the old SetFromJSON, from serialize-2.iss
-    method SetFromJSON(jsonvalue jo)
+    method SetFromJSON(jsonvalueref jo)
     {
         ; we can use our new method efficiently by referencing the parameter
         This:FromJSON[jo]
@@ -79,7 +79,7 @@ function main()
 
     ; JSON in
     echo "input =${jaPersons~}"
-    Persons:FromJSON["${jaPersons~}"]
+    Persons:FromJSON[jaPersons]
 
     ; JSON out
     echo "output=${Persons.AsJSON~}"

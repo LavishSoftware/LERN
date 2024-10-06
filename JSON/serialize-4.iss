@@ -6,14 +6,14 @@ objectdef person
     variable string LastName
 
     ; here's our new initializer, which can be used by index:FromJSON to initialize our person from JSON
-    method Initialize(jsonvalue jo)
+    method Initialize(jsonvalueref jo)
     {
         ; we'll reference the parameter and do the actual work in our own FromJSON method
         This:FromJSON[jo]
     }
 
     ; this one matches the old SetFromJSON, from serialize-2.iss
-    method SetFromJSON(jsonvalue jo)
+    method SetFromJSON(jsonvalueref jo)
     {
         ; we can use our new method efficiently by referencing the parameter
         This:FromJSON[jo]
@@ -80,24 +80,25 @@ function main()
     ; JSON in
     echo "input as array =${jaPersons~}"
     ; because we have an array input instead of an object, we're going to use jsonarray:ForEach to add each person to the collection, instead of using collection:FromJSON
-    jaPersons:ForEach["Persons:Set[\"\${ForEach.Value.Get[first_name]~} \${ForEach.Value.Get[last_name]~}\",\"\${ForEach.Value~}\"]"]
+    jaPersons:ForEach["Persons:Set[\"\${ForEach.Value.Get[first_name]~} \${ForEach.Value.Get[last_name]~}\",ForEach.Value]"]
+
+    variable jsonvalueref joPersons
+    joPersons:SetReference["Persons.AsJSON"]
 
     ; JSON out, in the form of an object. This will not match the input, because the input was an array.
-    echo "output as object=${Persons.AsJSON~}"
+    echo "output as object=${joPersons~}"
 
     ; JSON out in the form of an array. This will match the input
     echo "output as array=${Persons.AsJSON[array]~}"
 
     ; We can also use collection:FromJSON with our object output.
-    variable jsonvalue joPersons
-    joPersons:SetValue["${Persons.AsJSON~}"]
 
     ; clear the collection to show that we are fully re-creating it from our JSON
     Persons:Clear
     echo "--- cleared!"    
 
-    echo "input as object  =${joPersons~}"
-    Persons:FromJSON["${joPersons~}"]
+    echo "input as object =${joPersons~}"
+    Persons:FromJSON["joPersons"]
 
     echo "output as object=${Persons.AsJSON~}"
 
